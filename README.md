@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shri Manju Steel Furniture</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f4f6f9}
+header{
+background:linear-gradient(135deg,#1565c0,#42a5f5);
+color:#fff;padding:25px;text-align:center
+}
+header h1{font-size:32px}
+.hero{
+padding:60px 20px;
+text-align:center;
+background:#e3f2fd
+}
+.hero h2{font-size:40px;color:#1565c0}
+.hero p{margin:10px 0}
+.btn{
+background:#ff9800;color:#fff;border:none;
+padding:12px 20px;border-radius:6px;cursor:pointer
+}
+.section-title{
+text-align:center;
+margin:30px 0;
+color:#1565c0
+}
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
+max-width:1200px;
+margin:auto;
+}
+.card{
+background:#fff;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 3px 10px rgba(0,0,0,.15)
+}
+.card img{
+width:100%;
+height:180px;
+object-fit:cover
+}
+.card h3,.card p,.card h4{padding:10px}
+.card button{
+margin:10px;
+width:90%;
+padding:10px;
+background:#1565c0;
+color:white;
+border:none;
+cursor:pointer
+}
+.cart{
+max-width:800px;
+margin:20px auto;
+background:#fff;
+padding:20px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,.15)
+}
+.cart ul{list-style:none;margin-top:10px}
+.cart li{
+display:flex;
+justify-content:space-between;
+padding:8px 0;
+border-bottom:1px solid #ddd
+}
+.remove{
+background:red;
+color:#fff;
+border:none;
+padding:5px 10px;
+cursor:pointer
+}
+.payment,.contact{
+padding:40px 20px;
+text-align:center
+}
+.payment{
+background:#e8f5e9
+}
+.payment img{
+width:250px;
+margin:15px 0
+}
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:15px
+}
+@media(max-width:600px){
+.hero h2{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Shri Manju Steel Furniture Supply Repairs & Maintenance</h1>
+<p>Gundlupete, Karnataka - 571111</p>
+</header>
+
+<section class="hero">
+<h2>Steel Furniture Solutions</h2>
+<p>Supply • Repair • Maintenance</p>
+<button class="btn" onclick="window.location='tel:6331597876'">
+Call Now
+</button>
+</section>
+
+<h2 class="section-title">Our Products</h2>
+
+<section class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1519947486511-46149fa0a254?auto=format&fit=crop&w=800&q=80">
+<h3>Steel Chair</h3>
+<p>Strong Steel Chair</p>
+<h4>₹1,200</h4>
+<button onclick="addToCart('Steel Chair',1200)">Add To Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80">
+<h3>School Desk</h3>
+<h4>₹3,500</h4>
+<button onclick="addToCart('School Desk',3500)">Add To Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80">
+<h3>Office Table</h3>
+<h4>₹4,500</h4>
+<button onclick="addToCart('Office Table',4500)">Add To Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80">
+<h3>Steel Sofa</h3>
+<h4>₹12,000</h4>
+<button onclick="addToCart('Steel Sofa',12000)">Add To Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=800&q=80">
+<h3>Bench</h3>
+<h4>₹2,500</h4>
+<button onclick="addToCart('Bench',2500)">Add To Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80">
+<h3>Computer Table</h3>
+<h4>₹5,000</h4>
+<button onclick="addToCart('Computer Table',5000)">Add To Cart</button>
+</div>
+
+</section>
+
+<div class="cart">
+<h2>Cart (<span id="count">0</span>)</h2>
+<ul id="cartItems"></ul>
+<h3>Total: ₹<span id="total">0</span></h3>
+</div>
+
+<section class="payment">
+<h2>UPI Payment</h2>
+
+<!-- Replace qr.png with your QR image -->
+<img src="qr.png" alt="UPI QR Code">
+
+<p><strong>UPI Number:</strong> 6331597876</p>
+
+<a href="upi://pay?pa=6331597876@upi&pn=Shri%20Manju%20Steel%20Furniture">
+<button class="btn">Pay Now</button>
+</a>
+</section>
+
+<section class="contact">
+<h2>Contact Us</h2>
+<p>📞 6331597876</p>
+<p>📧 jyomani75@gmail.com</p>
+<p>📍 Gundlupete, Karnataka - 571111</p>
+</section>
+
+<footer>
+<p>© 2026 Shri Manju Steel Furniture Supply Repairs & Maintenance</p>
+<p>Designed By <b>MAANU</b></p>
+</footer>
+
+<script>
+let cart=[];
+let total=0;
+
+function addToCart(name,price){
+cart.push({name,price});
+renderCart();
+}
+
+function removeItem(index){
+cart.splice(index,1);
+renderCart();
+}
+
+function renderCart(){
+let list=document.getElementById("cartItems");
+list.innerHTML="";
+total=0;
+
+cart.forEach((item,index)=>{
+total+=item.price;
+
+list.innerHTML+=`
+<li>
+${item.name} - ₹${item.price}
+<button class="remove"
+onclick="removeItem(${index})">
+Remove
+</button>
+</li>`;
+});
+
+document.getElementById("count").innerText=cart.length;
+document.getElementById("total").innerText=total;
+}
+</script>
+
+</body>
+</html>
